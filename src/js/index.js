@@ -27,12 +27,9 @@ app.get('/webhook', function(req, res) {
 	}
 });
 
-// app.post('/webhook', parseInput);
+app.post('/webhook', parseInput);
 
-app.post('/webhook', function (req, res){
-	console.log("Hit webhook..");
-	res.sendStatus(200);
-});
+
 // app.post('/sms', parseSms);
 
 app.listen(process.env.PORT, function (){
