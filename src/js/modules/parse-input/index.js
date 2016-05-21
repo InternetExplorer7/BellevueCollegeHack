@@ -13,9 +13,13 @@ module.exports = function(req, res) {
         const sender = event.sender.id;
 
         if (event.message && !event.message.text.includes('/t')) { // retrieve
-        	student(sender, event.message.text);
+        	console.log('student: ' + event.message.text);
+        	// student(sender, event.message.text);
         } else if (event.message && event.message.text.includes('/t')) { // teach/train
-        	teacher(sender, event.message.text);
+        	console.log('teacher: ' + event.message.text);
+        	// teacher(sender, event.message.text);
+        } else {
+        	console.log('got something else: ' + event.message.text);
         }
     }
 
