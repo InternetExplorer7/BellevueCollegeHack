@@ -5,6 +5,7 @@ const teacher = require('../teacher');
 const student = require('../student');
 
 module.exports = function(req, res) {
+	console.log("message recieved...");
     messaging_events = req.body.entry[0].messaging;
 
     for (var i = 0; i < messaging_events.length; i++) {
