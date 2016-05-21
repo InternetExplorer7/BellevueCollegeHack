@@ -30,4 +30,4 @@ app.get('/webhook', function(req, res) {
 app.post('/webhook', parseInput);
 // app.post('/sms', parseSms);
 
-app.listen(3000);
+app.listen(process.env.PORT);
